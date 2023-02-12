@@ -1,0 +1,173 @@
+@font-face {
+  font-family: Lobster;
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('../fonts/lobster-v28-latin_cyrillic-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/lobster-v28-latin_cyrillic-regular.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  max-width: 800px;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url(../img/1.jpg);
+  color: #F85959;
+  text-shadow: -2px 1PX black;
+  display: flex;
+}
+
+img,
+svg {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset {
+  margin: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+.todo__title {
+  padding-left: 30px;
+  font-family: Lobster, sans-serif;
+  font-size: 35px;
+  text-align: center;
+}
+
+.todo__list {
+  padding-left: 24px;
+  color: black;
+}
+
+.todo__item {
+  font-size: 25px;
+}
+
+.todo__item-wrapper {
+  display: grid;
+  grid-template-columns: 1fr min-content min-content;
+  align-items: center;
+}
+
+.todo__item:last-child {
+  list-style-type: none;
+  font-size: 14px;
+}
+
+.todo__btn {
+  position: relative;
+  text-align: left;
+  display: flex;
+  align-items: flex-end;
+}
+
+.todo__btn:after {
+  content: '';
+  display: block;
+  height: 1px;
+  flex-grow: 1;
+  border-bottom: 1px dotted #F85959;
+}
+
+.todo__btn:hover {
+  color: #f53f3f;
+}
+
+.todo__edit {
+  flex-shrink: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/pen2.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  margin-right: 4px;
+}
+
+.todo__edit:hover {
+  opacity: 1;
+}
+
+.todo__del {
+  flex-shrink: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/img_54555.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+.todo__del:hover {
+  opacity: 1;
+}
+
+.todo__add {
+  display: inline-block;
+  color: #4694fa;
+  text-align: left;
+  background-color: aliceblue;
+  border-radius: 10px;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  border: 2px solid rgb(102, 153, 230);
+}
+
+
+@media (max-width: 500px) {
+  body {
+      margin: auto;
+      width: 500px;
+  }
+}
